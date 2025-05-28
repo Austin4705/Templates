@@ -1,13 +1,13 @@
 # Fdb version 4
-["pdflatex"] 1748403974.73741 "physicsmain.tex" "physicsmain.pdf" "physicsmain" 1748403977.12165 0
+["pdflatex"] 1748403711.01485 "physicsmain.tex" "physicsmain.pdf" "physicsmain" 1748403712.80398 2
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1246382020 928 2dc8d444221b7a635bb58038579b861a ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1246382020 908 2921f8a10601f252058503cc6570e581 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1246382020 940 228d6584342e91276bf566bcf9716b83 ""
+  "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
-  "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm" 1136768653 1300 63a6111ee6274895728663cf4b4e7e81 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1136768653 1524 4414a8315f39513458b80dfc63bff03a ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1136768653 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -19,6 +19,7 @@
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
+  "/usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
@@ -238,10 +239,10 @@
   "/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1748394945 403360 0f5349676fda672566c2258c9b98f28a ""
   "/usr/local/texlive/2025basic/texmf-var/web2c/pdftex/pdflatex.fmt" 1741448339 2663854 a6f6b8c904d47faabe5d94cfdac61310 ""
   "/usr/local/texlive/2025basic/texmf.cnf" 1741448314 628 81d1ada0f601fb1ffa62f1323192d946 ""
-  "austin.sty" 1748403973.58004 33077 61767f637dee8a3126d17ace52bda932 ""
-  "physicsmain.aux" 1748403977.00473 798 a056723ce406b99562ee183b0018730f "pdflatex"
+  "austin.sty" 1748403709.08329 34568 ddca990fe458459ad667b77a6c06c1c9 ""
+  "physicsmain.aux" 1748403712.72653 668 bf228900a508bd49d9820a78446c8003 "pdflatex"
   "physicsmain.tex" 1748403472.13957 296 2627b49ef7156fe1511130817b34b714 ""
-  "physicsmain.toc" 1748403977.0129 77 9e815f47681021ff5932c0e8cbdbda95 "pdflatex"
+  "physicsmain.toc" 1748403712.73061 77 9e815f47681021ff5932c0e8cbdbda95 "pdflatex"
   (generated)
   "physicsmain.aux"
   "physicsmain.log"
