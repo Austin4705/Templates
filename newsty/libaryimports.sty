@@ -1,0 +1,108 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{austin}
+
+% Austin
+\RequirePackage[margin=1in]{geometry}
+% Physics
+\RequirePackage[tmargin=2cm,rmargin=1in,lmargin=1in,margin=0.85in,bmargin=2cm,footskip=.2in]{geometry}
+
+% =======================
+% Math & Symbols
+% =======================
+\RequirePackage{amsmath, amsfonts, amssymb}
+\RequirePackage{mathtools}% extends amsmath
+\RequirePackage{bbm}% blackboard-bold 1
+\RequirePackage[varbb]{newpxmath}% Times-style math + varbb
+\RequirePackage{xfrac}% \sfrac{}
+\RequirePackage{derivative}
+\RequirePackage{braket}% Dirac notation
+\RequirePackage{physics2}
+\usephysicsmodule{ab}
+
+% =======================
+% Graphics & Images
+% =======================
+\RequirePackage{graphicx}
+\RequirePackage{svg}%include external SVG (needs ­--shell-escape)
+\RequirePackage{gensymb}% e.g. \degree
+
+% =======================
+% TikZ & Diagramming
+% =======================
+\RequirePackage{tikz}
+\RequirePackage{tikz-cd}
+\RequirePackage{tikzsymbols}
+\RequirePackage{tikzducks}
+
+% =======================
+% Color & Boxes
+% =======================
+\RequirePackage{xcolor}
+\RequirePackage[most, many, breakable]{tcolorbox}
+
+% =======================
+% Tables, Lists & Floats
+% =======================
+\RequirePackage{array}
+\RequirePackage{multicol}
+\RequirePackage{float}
+\RequirePackage{enumitem}
+
+% =======================
+% Code & Algorithms
+% =======================
+\RequirePackage{listings}
+\RequirePackage{algorithmic}
+\RequirePackage[ruled, vlined, linesnumbered]{algorithm2e}
+
+% =======================
+% References & Hyperlinks
+% =======================
+\RequirePackage{hyperref}
+\RequirePackage{bookmark} % faster bookmark handling
+\RequirePackage{natbib}
+\RequirePackage{titletoc}
+\RequirePackage{nameref}
+\RequirePackage{theoremref}
+
+% =======================
+% Page Style
+% =======================
+\RequirePackage{fancyhdr}
+
+% =======================
+% Utilities
+% =======================
+\RequirePackage{varwidth}
+\RequirePackage{etoolbox}
+\RequirePackage{xifthen}
+\RequirePackage{import}
+\RequirePackage{pdfpages} % insert external PDFs
+\RequirePackage{transparent} % change opacity
+\RequirePackage{comment}
+\RequirePackage{cancel}
+\usepackage{xparse} % For handling multiple optional arguments
+% =======================
+% Author & Affiliation
+% =======================
+\RequirePackage{authblk}
+
+% Header information
+\title{}
+\makeatletter
+\@ifclassloaded{amsart}{
+  \author{Austin Wu}
+}{}
+\date{\today}
+
+\pagestyle{fancy}
+\setlength{\headheight}{14.0pt}  % Fix for fancyhdr warning
+\setlength{\footskip}{14.0pt}    % Fix for footskip warning
+\lhead{Austin Wu (amw423)}
+
+\hypersetup{
+	pdftitle={Assignment},
+	colorlinks=true, linkcolor=doc!90,
+	bookmarksnumbered=true,
+	bookmarksopen=true
+}

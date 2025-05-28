@@ -1,0 +1,490 @@
+% Originally Rishi Gujjar Sty file
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{austin}
+
+\RequirePackage[margin=1in]{geometry}
+\RequirePackage{amsmath}
+\RequirePackage{amsthm}
+\RequirePackage{amsfonts}
+\RequirePackage{amssymb}
+\RequirePackage{graphicx}
+\RequirePackage{tikz}
+\RequirePackage{tikz-cd} 
+\RequirePackage{float}
+\RequirePackage[most,breakable]{tcolorbox}
+\RequirePackage{enumitem}
+\RequirePackage{hyperref}
+\RequirePackage{bbm}
+\RequirePackage{fancyhdr}
+\RequirePackage{derivative}
+\RequirePackage{listings}
+\RequirePackage{natbib}
+% \RequirePackage{babel}
+% \RequirePackage{biblatex} %Imports biblatex package
+\title{}
+\makeatletter
+\@ifclassloaded{amsart}{
+  \author{Austin Wu}
+}{}
+\date{\today}
+
+\pagestyle{fancy}
+\setlength{\headheight}{14.0pt}  % Fix for fancyhdr warning
+\setlength{\footskip}{14.0pt}    % Fix for footskip warning
+\lhead{Austin Wu (amw423)}
+
+\DeclareMathOperator{\cis}{cis}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\img}{img}
+
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\sgn}{sgn}
+
+% \DeclareMathOperator{\arcsec}{arcsec}
+% \DeclareMathOperator{\arccsc}{arccsc}
+% \DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arsinh}{arsinh}
+\DeclareMathOperator{\arcosh}{arcosh}
+\DeclareMathOperator{\artanh}{artanh}
+\DeclareMathOperator{\arsech}{arsech}
+\DeclareMathOperator{\arcsch}{arcsech}
+\DeclareMathOperator{\arcoth}{arcoth}
+
+
+\DeclareMathOperator{\1}{\mathbbm{1}}
+% \DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\dR}{dR}
+
+
+\DeclareMathOperator{\Mat}{Mat}
+% \DeclareMathOperator{\GL}{GL}
+% \DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\PSL}{PSL}
+% \DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Irr}{Irr}
+
+\DeclareMathOperator{\Zp}{\Z/p\Z}
+
+\DeclareMathOperator{\cl}{cl}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Inn}{Inn}
+\DeclareMathOperator{\Out}{Out}
+\DeclareMathOperator{\Stab}{Stab}
+
+
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\argmin}{argmin}
+\DeclareMathOperator{\argmax}{argmax}
+
+\DeclareMathOperator{\Obj}{Obj}
+\DeclareMathOperator{\Top}{Top}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Set}{Set}
+\DeclareMathOperator{\Grp}{Grp}
+\DeclareMathOperator{\Ab}{Ab}
+\DeclareMathOperator{\Ring}{Ring}
+\DeclareMathOperator{\Mod}{Mod}
+\DeclareMathOperator{\RMod}{\text{$R$-Mod}}
+\DeclareMathOperator{\ModR}{\text{Mod-$R$}}
+\DeclareMathOperator{\Alg}{Alg}
+\DeclareMathOperator{\kAlg}{\text{$k$-Alg}}
+
+\DeclareMathOperator{\Man}{Man}
+\DeclareMathOperator{\Diff}{Diff}
+
+
+\newcommand{\coloneq}{\mathrel{\vcenter{\baselineskip0.5ex \lineskiplimit0pt\hbox{\scriptsize.}\hbox{\scriptsize.}}}=}
+\newcommand{\notimplies}{\;\not\!\!\!\implies}
+\newcommand{\cbrt}[1]{\sqrt[3]{#1}}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+
+\newcommand{\deriv}[2]{\frac{\mathrm{d}{#1}}{\mathrm{d}{#2}}}
+\newcommand{\pderiv}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\newcommand{\diff}[1]{\,\mathrm{d}{#1}}
+\newcommand{\pdiff}[2]{\partial{#1}}
+% \newcommand{\dd}[1]{\deriv{}{#1}}
+\newcommand{\pdd}[1]{\pderiv{}{#1}}
+
+\newcommand{\ddn}[2]{\frac{\mathrm{d}}{\mathrm{d}{#2}^{#1}}}
+\newcommand{\pddn}[2]{\frac{\partial^{#1}}{\partial{#2}^{#1}}}
+
+\newcommand{\intab}[1]{\int_a^b{#1}}
+\newcommand{\intrn}[1]{\int_{\mathbb{R}^n}{#1}}
+\newcommand{\intg}[1]{\int_{\gamma}{#1}}
+\newcommand{\intinf}[1]{\int_{-\infty}^{\infty}{#1}}
+
+
+
+\newcommand{\bmat}[1]{\begin{bmatrix}#1\end{bmatrix}}
+% \newcommand{\pmat}[1]{\begin{pmatrix}#1\end{pmatrix}}
+
+\newcommand{\Bern}[1]{\text{Bern}\left(#1\right)}
+\newcommand{\Geom}[1]{\text{Geom}\left(#1\right)}
+\newcommand{\Binom}[2]{\text{Binom}\left(#1, #2\right)}
+
+\newcommand{\Ex}[1]{\mathbb{E}{\left[#1\right]}}
+% \newcommand{\Pr}[1]{\mathbf{Pr\left[#1\right]}}
+\newcommand{\Var}[1]{\text{Var}\left(#1\right)}
+\newcommand{\Cov}[2]{\text{Cov}\left(#1, #2\right)}
+\newcommand{\corr}[2]{\text{corr}\left(#1, #2\right)}
+
+\newcommand{\xto}[1]{\xrightarrow{#1}}
+\newcommand{\semi}{\ltimes}
+\newcommand{\acts}{\,\ensuremath{\rotatebox[origin=c]{-90}{$\circlearrowright$}}\,}
+
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\HH}{\mathbb{H}}
+
+\newcommand{\Sph}{\mathbb{S}}
+\newcommand{\Tor}{\mathbb{T}}
+\newcommand{\RP}{\mathbb{RP}}
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\bigO}{\mathcal{O}}
+\newcommand{\algo}{\mathcal{A}}
+\newcommand{\mS}{\mathcal{S}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\e}[1]{\emph{#1}}
+% \newcommand{\par}[1]{\{#1\}}
+
+\newcommand{\dg}{^{\circ}}
+
+\newcommand{\bfe}{\textbf{e}}
+\newcommand{\ii}{\mathbf{i}}
+\newcommand{\jj}{\mathbf{j}}
+\newcommand{\kk}{\mathbf{k}}
+
+\newcommand{\ext}{\mathbf{d}}
+% \newcommand{\op}{^{\text{op}}}
+
+\newcommand{\bv}[1]{\mathbf{#1}}
+
+\newcounter{theoremcntr}
+\newcounter{problemcntr}
+
+\newif\ifcolorboxes
+\colorboxestrue
+\newcommand\EnableColorBoxes{\colorboxestrue}
+\newcommand\DisableColorBoxes{\colorboxesfalse}
+
+\ifcolorboxes
+\NewDocumentEnvironment{theorem}{ o }
+{\bigskip\noindent          
+    \refstepcounter{theoremcntr}
+    \begin{tcolorbox}[enhanced, colback=blue!5!white, colframe=blue!75!white]
+        \IfValueTF{#1} {\textbf{Theorem \thetheoremcntr~(#1):} \\}{\textbf{Theorem \thetheoremcntr :} \\}
+        \newline
+        }{\end{tcolorbox} \par\bigskip}
+\numberwithin{theoremcntr}{section}
+
+\NewDocumentEnvironment{theorem*}{ o }
+{\bigskip\noindent
+    \begin{tcolorbox}[enhanced, colback=blue!5!white, colframe=blue!75!white]
+        \IfValueTF{#1} {\textbf{Theorem~(#1):} \\}{\textbf{Theorem:} \\}
+        \newline
+        }{\end{tcolorbox} \par\bigskip}
+
+\NewDocumentEnvironment{lemma}{ o }
+{\bigskip\noindent
+    \refstepcounter{theoremcntr}
+    \begin{tcolorbox}[enhanced, colback=blue!50!cyan!5!white, colframe=blue!50!cyan!75!white]
+        \IfValueTF{#1} {\textbf{Lemma \thetheoremcntr~(#1):} \\}{\textbf{Lemma \thetheoremcntr :} \\}
+        \newline
+        }{\end{tcolorbox} \par\bigskip}
+\numberwithin{theoremcntr}{section}
+
+
+\NewDocumentEnvironment{lemma*}{ o }
+{\bigskip\noindent
+    \begin{tcolorbox}[enhanced, colback=blue!50!cyan!5!white, colframe=blue!50!cyan!75!white]
+        \IfValueTF{#1} {\textbf{Lemma~(#1):} \\}{\textbf{Lemma:} \\}
+        \newline
+        }{\end{tcolorbox} \par\bigskip}
+
+
+\NewDocumentEnvironment{corollary}{ o }
+{\bigskip\noindent
+    \refstepcounter{theoremcntr}
+    \begin{tcolorbox}[enhanced, colback=cyan!5!white, colframe=cyan!75!white]
+        \IfValueTF{#1} {\textbf{Corollary \thetheoremcntr~(#1):} \\}{\textbf{Corollary \thetheoremcntr :} \\}
+        \newline
+        }{\end{tcolorbox} \par\bigskip}
+\numberwithin{theoremcntr}{section}
+
+
+\NewDocumentEnvironment{corollary*}{ o }
+{\bigskip\noindent
+    \begin{tcolorbox}[enhanced, colback=cyan!5!white, colframe=cyan!75!white]
+        \IfValueTF{#1} {\textbf{Corollary~(#1):} \\}{\textbf{Corollary:} \\}
+        \newline
+        }{\end{tcolorbox} \par\bigskip}
+
+
+\NewDocumentEnvironment{proposition}{ o }
+{\bigskip\noindent
+    \refstepcounter{theoremcntr}
+    \begin{tcolorbox}[enhanced, colback=green!45!black!5!white, colframe=green!45!black!75!white]
+        \IfValueTF{#1} {\textbf{Proposition \thetheoremcntr~(#1):} \\}{\textbf{Proposition \thetheoremcntr :} \\}
+        \newline
+        }{\end{tcolorbox} \par\bigskip}
+\numberwithin{theoremcntr}{section}
+
+
+\NewDocumentEnvironment{proposition*}{ o }
+{\bigskip\noindent
+    \begin{tcolorbox}[enhanced, colback=green!45!black!5!white, colframe=green!45!black!75!white]
+        \IfValueTF{#1} {\textbf{Proposition~(#1):} \\}{\textbf{Proposition:} \\}
+        \newline
+        }{\end{tcolorbox} \par\bigskip}
+
+\NewDocumentEnvironment{claim}{ o }
+{\bigskip\noindent
+    \refstepcounter{theoremcntr}
+    \begin{tcolorbox}[enhanced, colback=green!5!white, colframe=green!75!white]
+        \IfValueTF{#1} {\textbf{Claim \thetheoremcntr~(#1):} \\}{\textbf{Claim \thetheoremcntr :} \\}
+        \newline
+        }{\end{tcolorbox} \par\bigskip}
+\numberwithin{theoremcntr}{section}
+
+
+\NewDocumentEnvironment{claim*}{ o }
+{\bigskip\noindent
+    \begin{tcolorbox}[enhanced, colback=green!5!white, colframe=green!75!white]
+        \IfValueTF{#1} {\textbf{Claim~(#1):} \\}{\textbf{Claim:} \\}
+        \newline
+        }{\end{tcolorbox} \par\bigskip}
+
+\NewDocumentEnvironment{example}{ o }
+{\bigskip\noindent
+    \refstepcounter{theoremcntr}
+    \begin{tcolorbox}[enhanced, colback=red!5!white, colframe=red!75!white]
+        \IfValueTF{#1} {\textbf{Example \thetheoremcntr~(#1):} \\}{\textbf{Example \thetheoremcntr :} \\}
+        \newline
+        }{\end{tcolorbox} \par\bigskip}
+\numberwithin{theoremcntr}{section}
+
+
+\NewDocumentEnvironment{example*}{ o }
+{\bigskip\noindent
+    \begin{tcolorbox}[enhanced, colback=red!5!white, colframe=red!75!white]
+        \IfValueTF{#1} {\textbf{Example~(#1):} \\}{\textbf{Example:} \\}
+        \newline
+        }{\end{tcolorbox} \par\bigskip}
+
+\NewDocumentEnvironment{remark}{ o }
+{\bigskip\noindent
+    \refstepcounter{theoremcntr}
+    \begin{tcolorbox}[enhanced, colback=red!2!white, colframe=red!50!white]
+        \IfValueTF{#1} {\textbf{Remark \thetheoremcntr~(#1):} \\}{\textbf{Remark \thetheoremcntr :} \\}
+        \newline
+        }{\end{tcolorbox} \par\bigskip}
+\numberwithin{theoremcntr}{section}
+
+
+\NewDocumentEnvironment{remark*}{ o }
+{\bigskip\noindent
+    \begin{tcolorbox}[enhanced, colback=red!2!white, colframe=red!50!white]
+        \IfValueTF{#1} {\textbf{Remark~(#1):} \\}{\textbf{Remark:} \\}
+        \newline
+        }{\end{tcolorbox} \par\bigskip}
+
+\NewDocumentEnvironment{definition}{ o }
+{\bigskip\noindent
+    \refstepcounter{theoremcntr}
+    \begin{tcolorbox}[enhanced]
+        \IfValueTF{#1} {\textbf{Definition \thetheoremcntr~(#1):} \\}{\textbf{Definition \thetheoremcntr :} \\}
+        \newline
+        }{\end{tcolorbox} \par\bigskip}
+\numberwithin{theoremcntr}{section}
+
+
+\NewDocumentEnvironment{definition*}{ o }
+{\bigskip\noindent
+    \begin{tcolorbox}[enhanced]
+        \IfValueTF{#1} {\textbf{Definition~(#1):} \\}{\textbf{Definition:} \\}
+        \newline
+        }{\end{tcolorbox} \par\bigskip}
+
+\NewDocumentEnvironment{case2}{ m }
+{\bigskip\noindent
+    \begin{tcolorbox}[enhanced, colback=orange!5!white, colframe=orange!50!white]
+        \textbf{Case:~(#1):} \\
+        \newline
+        }{\end{tcolorbox} \par\bigskip}
+
+\NewDocumentEnvironment{problem}{}
+{
+    \newpage
+    \refstepcounter{problemcntr}
+    \setcounter{subproblem}{0}
+    \begin{center}
+        \textbf{Problem \theproblemcntr:}
+    \end{center}
+    \vspace{1em} % Small space after title
+    }{\par}
+
+\NewDocumentEnvironment{problem*}{ m o }
+{
+    \newpage
+    \refstepcounter{problemcntr}
+    \setcounter{subproblem}{0}
+    \begin{center}
+        \IfValueTF{#2} {\textbf{Problem~#1~(#2):}} {\textbf{Problem~#1:}}
+    \end{center}
+    \vspace{1em} % Small space after title
+    }{\par}
+
+% FOR PHYSREVB
+% % (or, if you don’t want italics bodies, add \theoremstyle{definition} before these)
+% \newtheorem{theorem}{Theorem}[section]
+% \newtheorem{lemma}[theorem]{Lemma}
+% \newtheorem{corollary}[theorem]{Corollary}
+% \newtheorem{proposition}[theorem]{Proposition}
+% \newtheorem{definition}[theorem]{Definition}
+% \newtheorem{remark}[theorem]{Remark}
+% \newtheorem{example}[theorem]{Example}
+% Austin Additions
+
+
+\RequirePackage{physics2}
+\usephysicsmodule{ab}
+
+\newcommand{\V}[1]{\begin{bmatrix}#1\end{bmatrix}}
+\renewcommand{\det}[1]{\begin{vmatrix}#1\end{vmatrix}}
+\newcommand{\pV}[1]{\begin{pmatrix}#1\end{pmatrix}}
+
+\newcommand{\fr}[2]{\frac{#1}{#2}}
+\newcommand{\bb}[1]{\boxed{#1}}
+\newcommand{\cd}{\cdot}
+\newcommand{\der}{\degree}
+\newcommand{\T}[1]{\text{#1}}
+\newcommand{\Ts}[1]{\text{ #1 }}
+\newcommand{\st}{\ \text{s.t.} \ }
+\newcommand{\lat}{\mathcal{L}}
+\DeclareMathOperator*{\expect}{\mathbb{E}}
+\DeclareMathOperator{\GL}{GL} % General linear group
+\DeclareMathOperator{\SL}{SL} % Special linear group
+% \newcommand{\wlog}{\ \text{wlog}\ }
+
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codeorange}{rgb}{1,0.49,0}
+\definecolor{codered}{rgb}{1, 0, 0}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.96}
+% \newcommand{\floor}[1]{\lfloor #1 \rfloor}
+% \newcommand{\ceil}[1]{\lceil #1 \rceil}
+
+
+\newcommand{\ExS}[2]{\mathbb{E}_{#1}{\left[#2\right]}}
+
+\RequirePackage{tikzducks}
+%\renewcommand{\qedsymbol}{$\blacksquare$}
+\renewcommand{\qedsymbol}{\begin{tikzpicture}
+    \duck[tophat, bowtie, scale = .2]
+\end{tikzpicture}}
+
+
+% Subproblem Box
+\usepackage{xparse} % For handling multiple optional arguments
+
+% Define a new counter for subproblems
+\newcounter{subproblem}[problemcntr]
+
+% Redefine the subproblem counter to use letters (a, b, c, ...)
+\renewcommand{\thesubproblem}{\alph{subproblem}}
+
+% Define a new environment for the problem box
+\newtcolorbox{problembox}[1]{
+    colback=blue!5!white,
+    colframe=blue!75!black,
+    fonttitle=\bfseries,
+    title=Problem \thesection.#1,
+    arc=0mm,
+    boxrule=0.5mm,
+    left=2mm,
+    right=2mm,
+    top=2mm,
+    bottom=2mm,
+    before upper={\setcounter{subproblem}{1}}
+}
+
+\definecolor{subproblemcolor}{RGB}{0,163,243}
+
+%\definecolor{subproblemcolor}{myblue}
+
+% Define a new environment for the subproblem box with two optional arguments
+\NewDocumentEnvironment{subproblem}{o o}{%
+    \stepcounter{subproblem} % Increment the subproblem counter
+    \vspace{0.5cm} % Space before subproblem
+    \noindent % No indentation
+    \IfNoValueTF{#1}{%
+        % If no custom title is provided, use "Subproblem a:"
+        \def\subproblemboxtitle{\thesubproblem:}%
+    }{%
+        % If a custom title is provided, check if it's empty
+        \if\relax\detokenize{#1}\relax%
+            % If the custom title is empty, use "Subproblem a:"
+            \def\subproblemboxtitle{\thesubproblem:}%
+        \else%
+            % If the custom title is not empty, use "Subproblem a - Title:"
+          \def\subproblemboxtitle{\textbf{\thesubproblem:}\begin{tcolorbox}[enhanced]#1\end{tcolorbox}}%
+        \fi%
+    }%
+    \IfNoValueTF{#2}{%
+        % If no reference is provided, don't add a label
+        \begin{tcolorbox}[
+            breakable,
+            colback= subproblemcolor!5!white,
+            colframe=subproblemcolor!75!black,
+            fonttitle=\bfseries,
+            title=\subproblemboxtitle,
+            arc=0mm,
+            boxrule=0.5mm,
+            left=2mm,
+            right=2mm,
+            top=2mm,
+            bottom=2mm
+        ]
+    }{%
+        % If a reference is provided, add the label
+        \begin{tcolorbox}[
+            breakable,
+            colback=subproblemcolor!5!white,
+            colframe=subproblemcolor!75!black,
+            fonttitle=\bfseries,
+            title=\subproblemboxtitle,
+            arc=0mm,
+            boxrule=0.5mm,
+            left=2mm,
+            right=2mm,
+            top=2mm,
+            bottom=2mm,
+            after title={\label{#2}} % Add the label after the title
+        ]
+    }%
+}{%
+    \end{tcolorbox}%
+}
+
+
+\RenewDocumentCommand{\det}{o}{%
+  \IfNoValueTF{#1}
+    {\operatorname{det}}        % no argument: just "det"
+    {\operatorname{det}\left(#1\right)}  % with argument: "det(...)"
+}
+
+\renewcommand{\b}[1]{\ifmmode\mathbf{#1}\else\textbf{#1}\fi}
+\newcommand{\im}{\operatorname{im}}
+

@@ -1,0 +1,154 @@
+% Math operators
+\DeclareMathOperator{\cis}{cis}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\img}{img}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\sgn}{sgn}
+% \DeclareMathOperator{\arcsec}{arcsec}
+% \DeclareMathOperator{\arccsc}{arccsc}
+% \DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arsinh}{arsinh}
+\DeclareMathOperator{\arcosh}{arcosh}
+\DeclareMathOperator{\artanh}{artanh}
+\DeclareMathOperator{\arsech}{arsech}
+\DeclareMathOperator{\arcsch}{arcsech}
+\DeclareMathOperator{\arcoth}{arcoth}
+\DeclareMathOperator{\1}{\mathbbm{1}}
+% \DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\dR}{dR}
+\DeclareMathOperator{\Mat}{Mat}
+% \DeclareMathOperator{\GL}{GL}
+% \DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\PSL}{PSL}
+% \DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Irr}{Irr}
+\DeclareMathOperator{\Zp}{\Z/p\Z}
+
+\DeclareMathOperator{\cl}{cl}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Inn}{Inn}
+\DeclareMathOperator{\Out}{Out}
+\DeclareMathOperator{\Stab}{Stab}
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\argmin}{argmin}
+\DeclareMathOperator{\argmax}{argmax}
+
+\DeclareMathOperator{\Obj}{Obj}
+\DeclareMathOperator{\Top}{Top}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Set}{Set}
+\DeclareMathOperator{\Grp}{Grp}
+\DeclareMathOperator{\Ab}{Ab}
+\DeclareMathOperator{\Ring}{Ring}
+\DeclareMathOperator{\Mod}{Mod}
+\DeclareMathOperator{\RMod}{\text{$R$-Mod}}
+\DeclareMathOperator{\ModR}{\text{Mod-$R$}}
+\DeclareMathOperator{\Alg}{Alg}
+\DeclareMathOperator{\kAlg}{\text{$k$-Alg}}
+
+\DeclareMathOperator{\Man}{Man}
+\DeclareMathOperator{\Diff}{Diff}
+
+\DeclareMathOperator*{\expect}{\mathbb{E}}
+
+% New commands
+\newcommand{\coloneq}{\mathrel{\vcenter{\baselineskip0.5ex \lineskiplimit0pt\hbox{\scriptsize.}\hbox{\scriptsize.}}}=}
+\newcommand{\notimplies}{\;\not\!\!\!\implies}
+\newcommand{\cbrt}[1]{\sqrt[3]{#1}}
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+
+\newcommand{\intab}[1]{\int_a^b{#1}}
+\newcommand{\intrn}[1]{\int_{\mathbb{R}^n}{#1}}
+\newcommand{\intg}[1]{\int_{\gamma}{#1}}
+\newcommand{\intinf}[1]{\int_{-\infty}^{\infty}{#1}}
+
+\newcommand{\Bern}[1]{\text{Bern}\left(#1\right)}
+\newcommand{\Geom}[1]{\text{Geom}\left(#1\right)}
+\newcommand{\Binom}[2]{\text{Binom}\left(#1, #2\right)}
+
+\newcommand{\Ex}[1]{\mathbb{E}{\left[#1\right]}}
+% \newcommand{\Pr}[1]{\mathbf{Pr\left[#1\right]}}
+\newcommand{\Var}[1]{\text{Var}\left(#1\right)}
+\newcommand{\Cov}[2]{\text{Cov}\left(#1, #2\right)}
+\newcommand{\corr}[2]{\text{corr}\left(#1, #2\right)}
+
+\newcommand{\xto}[1]{\xrightarrow{#1}}
+\newcommand{\semi}{\ltimes}
+\newcommand{\acts}{\,\ensuremath{\rotatebox[origin=c]{-90}{$\circlearrowright$}}\,}
+
+\newcommand{\fr}[2]{\frac{#1}{#2}}
+\newcommand{\bb}[1]{\boxed{#1}}
+\newcommand{\cd}{\cdot}
+\newcommand{\der}{\degree}
+\newcommand{\T}[1]{\text{#1}}
+\newcommand{\Ts}[1]{\text{ #1 }}
+\newcommand{\st}{\ \text{s.t.} \ }
+\newcommand{\lat}{\mathcal{L}}
+
+\renewcommand{\b}[1]{\ifmmode\mathbf{#1}\else\textbf{#1}\fi}
+\newcommand{\im}{\operatorname{im}}
+
+\newcommand{\V}[1]{\begin{bmatrix}#1\end{bmatrix}}
+\renewcommand{\det}[1]{\begin{vmatrix}#1\end{vmatrix}}
+\newcommand{\pV}[1]{\begin{pmatrix}#1\end{pmatrix}}
+
+%\renewcommand\qedsymbol{$\Laughey$}
+%\renewcommand{\qedsymbol}{$\blacksquare$}
+\renewcommand{\qedsymbol}{\begin{tikzpicture}
+    \duck[tophat, bowtie, scale = .2]
+\end{tikzpicture}}
+
+\RenewDocumentCommand{\det}{o}{%
+  \IfNoValueTF{#1}
+    {\operatorname{det}}        % no argument: just "det"
+    {\operatorname{det}\left(#1\right)}  % with argument: "det(...)"
+}
+
+% Symbol Shortcuts
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\HH}{\mathbb{H}}
+
+\newcommand{\Sph}{\mathbb{S}}
+\newcommand{\Tor}{\mathbb{T}}
+\newcommand{\RP}{\mathbb{RP}}
+\newcommand{\CP}{\mathbb{CP}}
+\newcommand{\bigO}{\mathcal{O}}
+\newcommand{\algo}{\mathcal{A}}
+\newcommand{\mS}{\mathcal{S}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\e}[1]{\emph{#1}}
+% \newcommand{\par}[1]{\{#1\}}
+
+\newcommand{\dg}{^{\circ}}
+
+\newcommand{\bfe}{\textbf{e}}
+\newcommand{\ii}{\mathbf{i}}
+\newcommand{\jj}{\mathbf{j}}
+\newcommand{\kk}{\mathbf{k}}
+\newcommand{\ext}{\mathbf{d}}
+% \newcommand{\op}{^{\text{op}}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\ExS}[2]{\mathbb{E}_{#1}{\left[#2\right]}}
+
+% Source Code lines
+\SetCommentSty{mycommfont}
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\renewcommand\lstlistingname{Source Code}
+\renewcommand\lstlistlistingname{Source Code}
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}}
